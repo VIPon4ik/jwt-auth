@@ -25,6 +25,7 @@ h1 {
   letter-spacing: 0.03rem;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-transform: capitalize;
 }
 
 .additional-link {
