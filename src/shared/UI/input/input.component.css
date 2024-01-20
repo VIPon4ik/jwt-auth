@@ -6,8 +6,21 @@ input {
   border-bottom: 2px solid;
   border-image: linear-gradient(
     90deg,
-    rgba(15, 126, 242, 1) 10%,
+    rgb(15, 223, 242) 10%,
     rgb(0, 255, 204) 100%
+  );
+  border-image-slice: 1;
+  transition: border-image 0.25s ease-in-out;
+  letter-spacing: 0.06rem;
+}
+
+input:focus,
+input:hover {
+  border-width: 2px;
+  border-image: linear-gradient(
+    90deg,
+    rgb(15, 102, 242) 10%,
+    rgb(0, 255, 255) 100%
   );
   border-image-slice: 1;
 }
