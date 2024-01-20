@@ -2,14 +2,6 @@
   position: relative;
 }
 
-.icon {
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  color: rgb(10, 51, 108);
-  transform: translateY(-50%);
-}
-
 input {
   width: 100%;
   outline: none;
@@ -24,6 +16,8 @@ input {
   border-image-slice: 1;
   transition: border-image 0.25s ease-in-out;
   letter-spacing: 0.06rem;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-weight: 500;
 }
 
 input::placeholder {
@@ -39,4 +33,13 @@ input:hover {
     rgb(0, 255, 255) 100%
   );
   border-image-slice: 1;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  color: rgb(10, 51, 108);
+  transform: translateY(-50%);
+  cursor: pointer;
 }

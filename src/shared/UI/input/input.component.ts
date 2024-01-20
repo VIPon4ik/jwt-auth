@@ -15,5 +15,10 @@ import { CommonModule } from '@angular/common';
 export class InputComponent {
   @Input() type:string = 'text';
   @Input() placeholder:string = '';
-  @Input() name!:string;
+  @Input() name:string = '';
+  changingType: boolean = false;
+
+  toggleShowPassword = () => {
+    this.changingType = !this.changingType;
+  }
 }
