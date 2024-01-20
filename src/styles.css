@@ -9,3 +9,18 @@ body {
   color: #212121;
   font-family: 16px;
 }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+
+input::placeholder {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}

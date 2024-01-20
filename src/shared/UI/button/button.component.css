@@ -1,7 +1,16 @@
 button {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  padding: 20px 40px;
   background: linear-gradient(
     90deg,
-    rgba(15, 126, 242, 1) 10%,
-    rgb(0, 255, 204) 100%
+    rgba(15, 126, 242, 1) 20%,
+    rgb(0, 255, 187) 110%
   );
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  letter-spacing: 0.24em;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }

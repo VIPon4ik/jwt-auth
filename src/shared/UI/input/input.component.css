@@ -14,6 +14,10 @@ input {
   letter-spacing: 0.06rem;
 }
 
+input::placeholder {
+  font-weight: 600;
+}
+
 input:focus,
 input:hover {
   border-width: 2px;
