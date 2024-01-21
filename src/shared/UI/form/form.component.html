@@ -1,9 +1,10 @@
-<form>
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
   <h1>{{ title }}</h1>
-  <app-input placeholder="Name" />
-  <app-input placeholder="Email" />
-  <app-input type="password" placeholder="Password" />
-  <app-checkbox></app-checkbox>
+  
+  <app-input *ngFor="let control of formGroup.controls | keyvalue" [placeholder]="control.key" [name]="control.key" [controlValue]="formGroup.get(control.key)"/>
+  <!-- <app-input placeholder="Email" name="email" /> -->
+  <!-- <app-input type="password" placeholder="Password" name="password"/> -->
+  <!-- <app-checkbox></app-checkbox> -->
   <app-button type="submit">create account</app-button>
   <p class="additional-link">Have an account?<ng-content></ng-content></p>
 </form>

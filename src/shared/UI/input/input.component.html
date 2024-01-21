@@ -1,4 +1,4 @@
 <div class="input-container">
-  <input [type]="changingType ? 'text' : type" [placeholder]="placeholder" [name]="name">
+  <input [type]="changingType ? 'text' : type" [placeholder]="placeholder" [name]="name" [formControl]="controlValue">
   <ng-icon *ngIf="type === 'password'" name="bootstrapEyeFill" class="icon" (click)="toggleShowPassword()"></ng-icon>
 </div>
