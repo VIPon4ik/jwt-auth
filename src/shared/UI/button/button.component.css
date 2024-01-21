@@ -14,3 +14,20 @@ button {
   letter-spacing: 0.24em;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
+
+button:hover,
+button:focus {
+  background: linear-gradient(
+    90deg,
+    rgb(15, 87, 242) 20%,
+    rgb(0, 255, 242) 110%
+  );
+}
+
+button:disabled {
+  background: linear-gradient(
+    90deg,
+    rgb(161, 161, 161) 20%,
+    rgb(223, 223, 223) 110%
+  );
+}
