@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { InputComponent } from '../input/input.component';
-import { ButtonComponent } from '../button/button.component';
-import { CheckboxComponent } from '../checkbox/checkbox.component';
+import { InputComponent } from '../../UI/input/input.component';
+import { ButtonComponent } from '../../UI/button/button.component';
+import { CheckboxComponent } from '../../UI/checkbox/checkbox.component';
 import { CommonModule } from '@angular/common';
-import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -22,4 +22,8 @@ export class FormComponent {
   @Input() additionalLinkTextGeneral!: string;
   @Input() additionalLinkText!: string;
   @Input() additionalLink!: string;
+
+  getType(controlName: string) {
+    return ['password', 'email'].includes(controlName) ? controlName : 'text';
+  }
 }

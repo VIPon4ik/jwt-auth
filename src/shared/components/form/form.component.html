@@ -6,6 +6,7 @@
     [placeholder]="control.key"
     [name]="control.key"
     [controlValue]="formGroup.get(control.key)"
+    [type]="getType(control.key)"
   />
   <app-checkbox
     *ngIf="checkboxText"
