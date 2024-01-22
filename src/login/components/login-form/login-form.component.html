@@ -1,1 +1,9 @@
-<!-- <app-form title="Login Form" /> -->
+<app-form
+  title="login form"
+  [formGroup]="loginForm"
+  [onSubmit]="onSubmit"
+  checkboxText="Are you agree with our rules?"
+  additionalLinkTextGeneral="Don't have an account?"
+  additionalLinkText="Register"
+  additionalLink="/register"
+/>
