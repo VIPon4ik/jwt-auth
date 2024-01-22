@@ -22,8 +22,13 @@ export class FormComponent {
   @Input() additionalLinkTextGeneral!: string;
   @Input() additionalLinkText!: string;
   @Input() additionalLink!: string;
+  
 
   getType(inputName: string) {
     return ['password', 'email'].includes(inputName) ? inputName : 'text';
+  }
+
+  log(value:any) {
+    console.log(value);
   }
 }

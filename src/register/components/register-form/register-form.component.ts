@@ -11,14 +11,13 @@ import { ReactiveFormsModule, Validators, FormBuilder } from '@angular/forms';
 })
 export class RegisterFormComponent {
   registerForm = this.formBuilder.group({
-    name: ['', Validators.required],
-    email: [''],
-    password: [''],
+    name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(12)]],
+    email: ['', [Validators.required, Validators.email]],
+    password: ['', [Validators.minLength(8), Validators.maxLength(32), Validators.required]],
   });
 
   onSubmit = () => {
     console.log(this.registerForm);
-    console.log(this.registerForm.get('name'))
   }
 
   constructor(private formBuilder: FormBuilder) { }

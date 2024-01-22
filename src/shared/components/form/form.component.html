@@ -7,14 +7,18 @@
       [control]="formGroup.get(control.key)"
       [type]="getType(control.key)"
     />
-    <div *ngIf="control.value.errors?.['required'] && control.value.touched">This field is required</div>
+    <p class="error-message" *ngIf="control.value.errors?.['required'] && control.value.touched">This field is required</p>
+    <p class="error-message" *ngIf="control.value.errors?.['minlength'] && control.value.touched">The length should be longer</p>
+    <p class="error-message" *ngIf="control.value.errors?.['maxlength'] && control.value.touched">The length should be shorter</p>
+    <p class="error-message" *ngIf="control.value.errors?.['email'] && control.value.touched">This must be email</p>
   </div>
 
   <app-checkbox
     *ngIf="checkboxText"
     [checkboxText]="checkboxText"
+    (toggleCheckboxEvent)="log($event)"
   ></app-checkbox>
-  <app-button type="submit">{{ buttonText }}</app-button>
+  <app-button type="submit" [disabled]="!formGroup.valid">{{ buttonText }}</app-button>
   <p
     class="additional-link"
     *ngIf="additionalLinkText || additionalLinkTextGeneral"

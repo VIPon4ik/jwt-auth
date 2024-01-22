@@ -1,6 +1,6 @@
 <label class="container">
   <div class="checkbox-container">
-    <input type="checkbox" />
+    <input type="checkbox" [checked]="isCheckboxChecked" (change)="toggleCheckbox()" />
     <span class="checkmark"></span>
   </div>
   {{checkboxText}}

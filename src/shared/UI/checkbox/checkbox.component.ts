@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { Input } from '@angular/core';
 
 @Component({
@@ -9,5 +9,12 @@ import { Input } from '@angular/core';
   styleUrl: './checkbox.component.css'
 })
 export class CheckboxComponent {
+  isCheckboxChecked: boolean = false;
   @Input() checkboxText!: string;
+  @Output() toggleCheckboxEvent = new EventEmitter<boolean>();
+
+  toggleCheckbox() {
+    this.isCheckboxChecked = !this.isCheckboxChecked
+    this.toggleCheckboxEvent.emit(this.isCheckboxChecked);
+  }
 }

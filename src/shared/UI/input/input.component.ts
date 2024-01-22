@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { Input } from '@angular/core';
 import { bootstrapEyeFill } from '@ng-icons/bootstrap-icons';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
