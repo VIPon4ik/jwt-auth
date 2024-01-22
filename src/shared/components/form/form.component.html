@@ -1,13 +1,14 @@
 <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
   <h1>{{ title }}</h1>
-
-  <app-input
-    *ngFor="let control of formGroup.controls | keyvalue"
-    [placeholder]="control.key"
-    [name]="control.key"
-    [control]="formGroup.get(control.key)"
-    [type]="getType(control.key)"
-  />
+  <div *ngFor="let control of formGroup.controls | keyvalue">
+    <app-input
+      [placeholder]="control.key"
+      [name]="control.key"
+      [control]="formGroup.get(control.key)"
+      [type]="getType(control.key)"
+    />
+    <div *ngIf="control.value.errors?.['required'] && control.value.touched">This field is required</div>
+  </div>
 
   <app-checkbox
     *ngIf="checkboxText"
