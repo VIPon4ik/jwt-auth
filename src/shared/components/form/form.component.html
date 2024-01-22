@@ -5,16 +5,15 @@
     *ngFor="let control of formGroup.controls | keyvalue"
     [placeholder]="control.key"
     [name]="control.key"
-    [controlValue]="formGroup.get(control.key)"
+    [control]="formGroup.get(control.key)"
     [type]="getType(control.key)"
   />
+
   <app-checkbox
     *ngIf="checkboxText"
     [checkboxText]="checkboxText"
   ></app-checkbox>
-  <app-button type="submit" [disabled]="!formGroup.valid">{{
-    buttonText
-  }}</app-button>
+  <app-button type="submit">{{ buttonText }}</app-button>
   <p
     class="additional-link"
     *ngIf="additionalLinkText || additionalLinkTextGeneral"

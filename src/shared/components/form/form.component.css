@@ -43,3 +43,7 @@ h1 {
 .additional-link a:hover {
   color: rgb(15, 110, 212);
 }
+
+.ng-invalid.required {
+  display: none;
+}

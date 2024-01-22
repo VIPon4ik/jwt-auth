@@ -18,6 +18,7 @@ export class RegisterFormComponent {
 
   onSubmit = () => {
     console.log(this.registerForm.value);
+    console.log(this.registerForm.get('name'))
   }
 
   constructor(private formBuilder: FormBuilder) { }

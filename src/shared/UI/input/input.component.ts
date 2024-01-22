@@ -14,10 +14,10 @@ import { ReactiveFormsModule } from '@angular/forms';
   styleUrl: './input.component.css',
 })
 export class InputComponent {
-  @Input() type:string = 'text';
-  @Input() placeholder:string = '';
-  @Input() name:string = '';
-  @Input() controlValue!: any;
+  @Input() type: string = 'text';
+  @Input() placeholder: string = '';
+  @Input() name: string = '';
+  @Input() control!: any;
   changingType: boolean = false;
 
   toggleShowPassword = () => {
