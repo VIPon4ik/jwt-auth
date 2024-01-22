@@ -17,18 +17,19 @@ export class FormComponent {
   @Input() title!: string;
   @Input() formGroup!: FormGroup;
   @Input() onSubmit!: Function;
-  @Input() checkboxText!: string;
+  @Input() checkboxText: string = '';
   @Input() buttonText: string = 'submit';
   @Input() additionalLinkTextGeneral!: string;
   @Input() additionalLinkText!: string;
   @Input() additionalLink!: string;
-  
+
+  isCheckboxChecked: boolean = false;
 
   getType(inputName: string) {
     return ['password', 'email'].includes(inputName) ? inputName : 'text';
   }
 
-  log(value:any) {
-    console.log(value);
+  toggleCheckbox(value:boolean) {
+    this.isCheckboxChecked = value;
   }
 }

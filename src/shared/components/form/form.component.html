@@ -16,9 +16,9 @@
   <app-checkbox
     *ngIf="checkboxText"
     [checkboxText]="checkboxText"
-    (toggleCheckboxEvent)="log($event)"
+    (toggleCheckboxEvent)="toggleCheckbox($event)"
   ></app-checkbox>
-  <app-button type="submit" [disabled]="!formGroup.valid">{{ buttonText }}</app-button>
+  <app-button type="submit" [disabled]="!formGroup.valid || (checkboxText !== '' && !isCheckboxChecked)">{{ buttonText }}</app-button>
   <p
     class="additional-link"
     *ngIf="additionalLinkText || additionalLinkTextGeneral"
